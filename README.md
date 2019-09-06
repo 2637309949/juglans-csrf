@@ -45,7 +45,7 @@ app.use(function * (next) {
 }
 ```
 
-- 
+- custom global request
 ```javascript
 <script type="text/javascript">
     var csrf_token = document.querySelector("meta[name='csrf-token']").getAttribute("content");

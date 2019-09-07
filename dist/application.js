@@ -90,7 +90,6 @@ module.exports = function () {
         } = options;
         assert(secret, 'you must pass a server-side secret to use in the encryption');
         assert(cookie, 'you must pass the key of the cookie to generate the token and verify authenticity');
-        assert(cookie, 'you must pass the key of the cookie to generate the token and verify authenticity');
         router.use(
         /*#__PURE__*/
         function () {
@@ -100,7 +99,7 @@ module.exports = function () {
               return;
             }
 
-            sign = sign === undefined ? ctx.app.keys && ctx.app.keys.length : !!sign;
+            options.sign = sign = sign === undefined ? ctx.app.keys && ctx.app.keys.length : !!sign;
 
             if (ctx.method === 'GET') {
               yield create(ctx, next, options);

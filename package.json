@@ -12,9 +12,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "engines": {
-    "node": "^7.10.1 || >= 8.1.4"
-  },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
@@ -55,6 +52,7 @@
     ]
   },
   "dependencies": {
+    "juglans-addition": "^1.0.9",
     "blueimp-md5": "^2.12.0",
     "hasha": "^5.0.0",
     "is": "^3.3.0"

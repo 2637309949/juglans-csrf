@@ -11,7 +11,7 @@ const assert = require('assert').strict;
 
 const hasha = require('hasha');
 
-const logger = require('logger');
+const logger = require('./logger');
 
 const ignore = {
   'HEAD': true,
@@ -43,7 +43,8 @@ function _verify() {
     if (hash === csrf) {
       yield next();
     } else {
-      logger.error(ctx.request.path, ':invalid csrf token');
+      // console.log('error = ', logger.error)
+      // logger.error(ctx.request.path, ':invalid csrf token')
       ctx.throw(403, 'invalid csrf token');
     }
   });

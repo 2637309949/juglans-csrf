@@ -43,8 +43,7 @@ function _verify() {
     if (hash === csrf) {
       yield next();
     } else {
-      // console.log('error = ', logger.error)
-      // logger.error(ctx.request.path, ':invalid csrf token')
+      logger.error(ctx.request.path, ':invalid csrf token');
       ctx.throw(403, 'invalid csrf token');
     }
   });
